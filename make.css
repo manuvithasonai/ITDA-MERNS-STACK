@@ -1,0 +1,1364 @@
+/* =========================================================
+   MAKE MY TRIP - COMPLETE CSS
+   Modern Travel Website
+========================================================= */
+
+/* =========================
+   GOOGLE FONT IMPORT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================
+   ROOT COLORS
+========================= */
+
+:root {
+    --primary: #0077b6;
+    --primary-dark: #005f8f;
+    --secondary: #00b4d8;
+
+    --green: #2e7d32;
+    --green-light: #4caf50;
+    --green-dark: #1b5e20;
+
+    --orange: #ff9f1c;
+    --orange-dark: #e88700;
+
+    --dark: #123047;
+    --text: #52606d;
+
+    --white: #ffffff;
+    --background: #f5f8fa;
+    --light-blue: #e0f7ff;
+    --light-green: #e8f5e9;
+
+    --border: #e1e8ed;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================
+   GENERAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    padding: 12px 0;
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 28px;
+
+    color: var(--primary);
+
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-size: 9px;
+
+    color: var(--text);
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+nav a {
+    padding: 9px 13px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: var(--dark);
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--white);
+
+    background: var(--primary);
+}
+
+
+/* =========================
+   COMMON BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+.btn-orange {
+    background: var(--orange);
+
+    color: var(--white);
+}
+
+.btn-orange:hover {
+    background: var(--orange-dark);
+
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+
+    color: var(--white);
+
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+
+    color: var(--primary);
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    display: none;
+
+    min-height: 100vh;
+}
+
+
+/* HOME DEFAULT */
+
+#home {
+    display: block;
+}
+
+
+/* SHOW SELECTED PAGE */
+
+#home:target,
+#destinations:target,
+#trips:target,
+#planner:target,
+#packages:target,
+#contact:target {
+    display: block;
+}
+
+
+/* =========================
+   HOME PAGE
+   BLUE + SKY THEME
+========================= */
+
+#home {
+    background: linear-gradient(
+        135deg,
+        #e0f7ff,
+        #ffffff
+    );
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
+.hero {
+    min-height: 82vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 119, 182, 0.88),
+            rgba(0, 180, 216, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    width: min(900px, 92%);
+
+    margin: auto;
+
+    text-align: center;
+
+    color: var(--white);
+
+    padding: 80px 0;
+}
+
+.hero-content span {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(48px, 8vw, 90px);
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    font-size: 18px;
+
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.home-section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 42px;
+
+    color: var(--dark);
+
+    margin: 8px 0;
+}
+
+.section-title p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--text);
+}
+
+
+/* =========================
+   HOME FEATURE CARDS
+========================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    background: var(--white);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.35s ease;
+
+    border-top: 5px solid var(--secondary);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-card img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.feature-card-content {
+    padding: 24px;
+}
+
+.feature-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 26px;
+
+    color: var(--primary-dark);
+
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   HOME SPECIAL BANNER
+========================= */
+
+.feature-banner {
+    margin-top: 50px;
+
+    border-radius: 20px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 95, 143, 0.94),
+            rgba(0, 180, 216, 0.90)
+        );
+}
+
+.feature-banner h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.feature-banner p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* =========================
+   DESTINATIONS PAGE
+   GREEN + NATURE THEME
+========================= */
+
+#destinations {
+    background: linear-gradient(
+        135deg,
+        #e8f5e9,
+        #ffffff
+    );
+}
+
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+    min-height: 330px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(27, 94, 32, 0.92),
+            rgba(76, 175, 80, 0.80)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.page-banner h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(45px, 7vw, 70px);
+
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 17px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   DESTINATION GRID
+========================= */
+
+.destinations-section {
+    padding: 70px 0;
+}
+
+.destination-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   DESTINATION CARD
+========================= */
+
+.destination-card {
+    background: var(--white);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    border-top: 5px solid var(--green-light);
+
+    transition: 0.35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+
+    border-top-color: var(--orange);
+}
+
+.destination-card img {
+    height: 210px;
+
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 20px;
+}
+
+.destination-content h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 25px;
+
+    color: var(--green-dark);
+
+    margin-bottom: 7px;
+}
+
+.destination-content p {
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.destination-content .btn-primary {
+    background: var(--green);
+}
+
+.destination-content .btn-primary:hover {
+    background: var(--green-dark);
+}
+
+
+/* =========================
+   TRIPS PAGE
+========================= */
+
+#trips {
+    background: #f5f8fa;
+
+    padding-bottom: 70px;
+}
+
+.trip-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 70px 0;
+}
+
+.trip-card {
+    background: var(--white);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+
+    border-bottom: 4px solid var(--primary);
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.trip-icon {
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: #e0f7ff;
+
+    color: var(--primary);
+}
+
+.trip-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    color: var(--dark);
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PLANNER PAGE
+========================= */
+
+#planner {
+    background: #f8fbfd;
+
+    padding-bottom: 70px;
+}
+
+.planner-section {
+    padding: 70px 0;
+}
+
+.planner-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.plan-card {
+    background: var(--white);
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s ease;
+
+    border-top: 4px solid var(--secondary);
+}
+
+.plan-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.plan-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    color: var(--primary-dark);
+
+    font-size: 28px;
+}
+
+.plan-card .days {
+    font-size: 35px;
+
+    font-weight: 700;
+
+    color: var(--orange);
+
+    margin: 10px 0;
+}
+
+.plan-card p {
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PLANNER CTA
+========================= */
+
+.planner-cta {
+    margin-top: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--secondary)
+        );
+
+    color: var(--white);
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+}
+
+.planner-cta h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.planner-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* =========================
+   PACKAGES PAGE
+========================= */
+
+#packages {
+    background: #fffaf0;
+
+    padding-bottom: 70px;
+}
+
+.package-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 70px 0;
+}
+
+.package-card {
+    background: var(--white);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.35s ease;
+
+    border: 1px solid var(--border);
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.package-card img {
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.package-content {
+    padding: 25px;
+}
+
+.package-content h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 27px;
+
+    color: var(--dark);
+
+    margin-bottom: 8px;
+}
+
+.package-price {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: var(--orange);
+
+    margin: 12px 0;
+}
+
+.package-content ul {
+    list-style: none;
+
+    margin: 15px 0 20px;
+}
+
+.package-content li {
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.package-content li::before {
+    content: "✓";
+
+    color: var(--green);
+
+    font-weight: 700;
+
+    margin-right: 8px;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+#contact {
+    background: #f5f8fa;
+
+    padding-bottom: 70px;
+}
+
+.contact-section {
+    padding: 70px 0;
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 30px;
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--secondary)
+        );
+
+    color: var(--white);
+
+    padding: 40px;
+
+    border-radius: 20px;
+}
+
+.contact-info h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    background: var(--white);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+    font-family: 'DM Serif Display', serif;
+
+    color: var(--dark);
+
+    font-size: 34px;
+
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--dark);
+
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.10);
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    margin-top: 50px;
+
+    padding: 45px 35px;
+
+    background: var(--white);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.about-section h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 36px;
+
+    color: var(--primary-dark);
+
+    margin-bottom: 12px;
+}
+
+.about-section p {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #102b3a;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    padding: 45px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: var(--white);
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.footer-col a {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+
+    transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--secondary);
+
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding-top: 18px;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DESTINATION SPECIAL COLORS
+========================= */
+
+#destinations h1,
+#destinations h2,
+#destinations h3 {
+    color: var(--green-dark);
+}
+
+#destinations .section-title span {
+    color: var(--green);
+}
+
+#destinations .section-title h2 {
+    color: var(--green-dark);
+}
+
+
+/* =========================
+   HOME SPECIAL COLORS
+========================= */
+
+#home h2,
+#home h3 {
+    color: var(--primary-dark);
+}
+
+#home .section-title span {
+    color: var(--primary);
+}
+
+#home .section-title h2 {
+    color: var(--primary-dark);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trip-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+    }
+
+    .navbar {
+        width: 95%;
+    }
+
+    nav {
+        width: 100%;
+
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 12px;
+
+        padding: 7px 8px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .feature-grid,
+    .destination-grid,
+    .trip-grid,
+    .planner-grid,
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .page-banner {
+        min-height: 280px;
+    }
+
+    .page-banner h1 {
+        font-size: 45px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 28px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+    .logo h2 {
+        font-size: 23px;
+    }
+
+    .logo span {
+        font-size: 7px;
+    }
+
+    nav a {
+        font-size: 11px;
+
+        padding: 6px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+
+        max-width: 260px;
+
+        text-align: center;
+    }
+
+    .feature-banner h2 {
+        font-size: 30px;
+    }
+
+    .planner-cta h2 {
+        font-size: 30px;
+    }
+
+    .page-banner h1 {
+        font-size: 38px;
+    }
+}

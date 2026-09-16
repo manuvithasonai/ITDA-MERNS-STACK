@@ -1,0 +1,37 @@
+#div1{
+    background-color: aqua;
+}
+#div2{
+    background-color: blue;
+}
+#div3{
+    background-color: blueviolet;
+}
+
+
+.man1{
+    text-align: center;
+}
+
+.man2{
+    text-align: center;
+}
+
+.man3{
+    text-align: center;
+}
+
+h1{
+    color:blue
+}
+h2{
+    color:blueviolet
+}
+
+h3{
+    color:aqua
+}
+
+*{
+    background-color: black;
+}
